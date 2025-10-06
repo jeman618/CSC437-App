@@ -1,0 +1,64 @@
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+section.Teams {
+    font-size: 25px;
+    text-align: center;
+    align-self: center;
+}
+
+section.Schedule {
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Courier New';
+    vertical-align: text-top;
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    color: var(--color-text-header);
+    background-color: var(--color-background-header);
+}
+
+h2 {
+    background-color: var(--color-background-header);
+    color: var(--color-text-header);
+    font-size: 35px;
+    text-align: center;
+}
+
+dl, dt, dd {
+    text-align: center;
+}
+
+table, th, td {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border: 5px solid gray;
+    border-collapse: collapse;
+}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: red;
+}
+
+a:active {
+    color: orange;
+}
+
+img {
+    width: 100px;
+    height: 60px;
+}
