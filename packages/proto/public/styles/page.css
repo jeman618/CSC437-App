@@ -1,7 +1,7 @@
 body {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: var(--color-text);
 }
 
 section.Teams {
@@ -46,19 +46,23 @@ table, th, td {
 }
 
 a:link {
-    color: red;
+    color: var(--color-text);
     text-decoration: none;
 }
 
 a:visited {
-    color: red;
+    color: var(--color-text);
+}
+
+a:hover {
+    color: #3271a8;
 }
 
 a:active {
-    color: orange;
+    color: #85afd4;
 }
 
 img {
-    width: 100px;
-    height: 60px;
+    max-width: 10%;
+    height: auto;
 }
