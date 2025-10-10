@@ -1,5 +1,7 @@
 :root {
     --color-background-header: #1B47A6;
+    --color-background: white;
     --color-text-header: white;
     --color-text: black;
+    --align-text: center;
 }
