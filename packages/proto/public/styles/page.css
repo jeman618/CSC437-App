@@ -1,6 +1,6 @@
 body {
-    background-color: var(-color-background);
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-background);
+    font-family: 'Roboto', sans-serif;
     color: var(--color-text);
 }
 
@@ -12,13 +12,14 @@ section.Teams {
 
 section.Schedule {
     font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: var(--align-text);
 }
 
+h1, h2 {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+}
+
 h1 {
-    font-family: 'Courier New', Courier, monospace;
-    vertical-align: text-top;
     text-align: var(--align-text);
     padding: 5px;
     font-size: 40px;
@@ -65,4 +66,12 @@ a:active {
 img {
     max-width: 10%;
     height: auto;
+}
+
+svg.icon {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline;
+  vertical-align: middle;
+  fill: currentColor;
 }
