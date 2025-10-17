@@ -5,7 +5,7 @@ body {
 }
 
 .Teams {
-    font-size: 25px;
+    font-size: 30px;
     text-align: var(--align-text);
     align-self: var(--align-text);
 }
@@ -38,10 +38,12 @@ h3 {
     font-size: 30px;
     font-style: italic;
     text-align: var(--align-text);
+    margin: 0.5px;
 }
 
 p {
     color: yellow;
+    padding: 5px;
     text-decoration: underline;
 }
 

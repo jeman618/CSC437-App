@@ -2,17 +2,15 @@
   margin: 1;
   box-sizing: border-box;
 }
-/* body {
-  line-height: 1;
-} */
 
 img {
-    max-width: 15%;
-    height: auto;
+  max-width: 15%;
+  height: auto;
 }
 
-img > NFC_logo {
-  
+.C_logo {
+  max-width: 7%;
+  height: auto;
 }
 
 header {
@@ -25,16 +23,13 @@ header {
   color: var(--color-text-header);
 }
 
-.page > header {
-  grid-column: start / end;
-}
-
 .Teams {
   display: grid;
   grid-template-columns: [start] 1fr 1fr 1fr 1fr [end];
+  gap: 5px;
   align-items: start;
 }
 
-h3 {
-  line-height: 0;
+.Teams > dl > h3 {
+  text-align: left;
 }
