@@ -1,6 +1,7 @@
 :root {
+    --color-background-title: #1B47A6;
     --color-background-header: #1B47A6;
-    --color-background: white;
+    --color-background: #f7f0d1;
     --color-text-header: white;
     --color-text: black;
     --align-text: center;

@@ -4,13 +4,13 @@ body {
     color: var(--color-text);
 }
 
-section.Teams {
+.Teams {
     font-size: 25px;
     text-align: var(--align-text);
     align-self: var(--align-text);
 }
 
-section.Schedule {
+.Schedule {
     font-size: 20px;
     text-align: var(--align-text);
 }
@@ -20,8 +20,8 @@ h1, h2 {
 }
 
 h1 {
+    font-style: italic;
     text-align: var(--align-text);
-    padding: 5px;
     font-size: 40px;
     color: var(--color-text-header);
     background-color: var(--color-background-header);
@@ -34,16 +34,24 @@ h2 {
     text-align: var(--align-text);
 }
 
+h3 {
+    font-size: 30px;
+    font-style: italic;
+    text-align: var(--align-text);
+}
+
+p {
+    color: yellow;
+    text-decoration: underline;
+}
+
 dl, dt, dd {
     text-align: var(--align-text);
 }
 
-table, th, td {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    border: 5px solid gray;
-    border-collapse: collapse;
+dt {
+    text-align: left;
+    padding: 10px;
 }
 
 a:link {
@@ -63,14 +71,9 @@ a:active {
     color: #85afd4;
 }
 
-img {
-    max-width: 10%;
-    height: auto;
-}
-
-svg.icon {
-  width: 1.5em;
-  height: 1.5em;
+.icon {
+  width: 1em;
+  height: 1em;
   display: inline;
   vertical-align: middle;
   fill: currentColor;

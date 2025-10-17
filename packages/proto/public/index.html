@@ -11,15 +11,19 @@
 
     <link rel="stylesheet" href="/styles/tokens.css">
     <link rel="stylesheet" href="/styles/page.css">
+    <link rel="stylesheet" href="/styles/reset.css">
 
-    <title>Football</title>
+    <title>Football </title>
 </head>
 
-<body>
-    <h1>
-        <svg class="icon">
-            <use href="/icons/football.svg#icon-player"/>
-        </svg>All Football &#127944;</h1>
+<body class="page">
+
+    <header>
+        <h1><svg class="icon"> <use href="/icons/football.svg#icon-player"/></svg>
+            All Football
+        </h1>
+        <p>All your football needs</p>
+    </header>
     <section class = "Schedule">
         <h2>Games</h2>
         <dl>
@@ -29,40 +33,40 @@
         </dl>
     </section>
 
-    <section class="Teams">
-        <h2>Teams</h2>
-
-        <h3>NFC</h3>  
-            <dl>
-                <h3>NFC East</h3> 
-                <dt><a href="teams/eagles.html"><img src="teams/logos/Philadelphia_Eagles.png">Eagles</a></dt>
-                <dt><a href="teams/commanders.html"><img src="teams/logos/Washington_Commanders.png">Commanders</a></dt>
-                <dt><img src="teams/logos/Dallas_Cowboys.png">Cowboys</dt>
-                <dt><img src="teams/logos/New_York_Giants.png">Giants</dt>        
-            </dl>  
-            <dl>
-                <h3>NFC West</h3>
-                <dt><a href="teams/49ers.html"><img src="teams/logos/San_Francisco_49ers.png" alt="49ers Logo">49ers</a></dt>
-                <dt><a href="teams/seahawks.html"><img src="teams/logos/Seattle_Seahawks.png" alt="Seahawks logo">Seahawks</a></dt>
-                <dt><a href="teams/rams.html"><img src="teams/logos/Los_Angeles_Rams.png" alt="Rams logo">Rams</a></dt>
-                <dt><a href="teams/cardinals.html"><img src="teams/logos/Arizona_Cardinals.png" alt="Cardinals logo">Cardinals</a></dt> 
-            </dl>
-            <dl>
-                <h3>NFC North</h3>
-                <dt><img src="teams/logos/Detriot_Lions.png">Lions</dt>
-                <dt><img src="teams/logos/Green_Bay_Packers.png">Packers</dt>
-                <dt><img src="teams/logos/Minnesota_Vikings.png">Vikings</dt>
-                <dt><img src="teams/logos/Chicago_Bears.png">Bears</dt>    
-            </dl>
-            <dl>
-                <h3>NFC South</h3>
-                <dt><img src="teams/logos/Tampa_Bay_Buccaneers.png">Buccaneers</dt>
-                <dt><img src="teams/logos/Atlanta_Falcons.png">Falcons</dt>
-                <dt><img src="teams/logos/Carolina_Panthers.png">Panthers</dt>
-                <dt><img src="teams/logos/New_Orleans_Saints.png">Saints</dt>  
-            </dl>
-
-        <h3>AFC</h3>
+    <h2>Teams</h2>
+    <h3><img src="teams/logos/NFC_logo.png" alt="N">FC</h3>
+    <div class="Teams">
+        <dl>
+            <h3>NFC East</h3> 
+            <dt><a href="teams/eagles.html"><img src="teams/logos/Philadelphia_Eagles.png">Eagles</a></dt>
+            <dt><a href="teams/commanders.html"><img src="teams/logos/Washington_Commanders.png">Commanders</a></dt>
+            <dt><img src="teams/logos/Dallas_Cowboys.png">Cowboys</dt>
+            <dt><img src="teams/logos/New_York_Giants.png">Giants</dt>        
+        </dl>  
+        <dl>
+            <h3>NFC West</h3>
+            <dt><a href="teams/49ers.html"><img src="teams/logos/San_Francisco_49ers.png" alt="49ers Logo">49ers</a></dt>
+            <dt><a href="teams/seahawks.html"><img src="teams/logos/Seattle_Seahawks.png" alt="Seahawks logo">Seahawks</a></dt>
+            <dt><a href="teams/rams.html"><img src="teams/logos/Los_Angeles_Rams.png" alt="Rams logo">Rams</a></dt>
+            <dt><a href="teams/cardinals.html"><img src="teams/logos/Arizona_Cardinals.png" alt="Cardinals logo">Cardinals</a></dt> 
+        </dl>
+        <dl>
+            <h3>NFC North</h3>
+            <dt><img src="teams/logos/Detriot_Lions.png">Lions</dt>
+            <dt><img src="teams/logos/Green_Bay_Packers.png">Packers</dt>
+            <dt><img src="teams/logos/Minnesota_Vikings.png">Vikings</dt>
+            <dt><img src="teams/logos/Chicago_Bears.png">Bears</dt>    
+        </dl>
+        <dl>
+            <h3>NFC South</h3>
+            <dt><img src="teams/logos/Tampa_Bay_Buccaneers.png">Buccaneers</dt>
+            <dt><img src="teams/logos/Atlanta_Falcons.png">Falcons</dt>
+            <dt><img src="teams/logos/Carolina_Panthers.png">Panthers</dt>
+            <dt><img src="teams/logos/New_Orleans_Saints.png">Saints</dt>  
+        </dl>
+    </div>
+    <h3><img src="teams/logos/AFC_logo.png" alt="A">FC</h3> 
+    <div class="Teams">
         <dl>
             <h3>AFC East</h3>
             <dt><img src="teams/logos/Buffalo_Bills.png">Bills</dt>
@@ -91,12 +95,12 @@
             <dt><img src="teams/logos/Houston_Texans.png">Texans</dt>
             <dt><img src="teams/logos/Tennessee_Titans.png">Titans</dt>
         </dl>
-    </section>
+        </div>
 
     <section class="Ranking">
         <h2>Ranking</h2>
         <ol>
-            <li><a href="49ers.html">49ers</a></li>
+            <li><a href="49ers.html"><img src="teams/logos/San_Francisco_49ers.png" alt="49ers Logo">49ers</a></li>
             <li>Rams</li>
             <li>Seahawks</li>
             <li>Cardinals</li>
@@ -129,6 +133,7 @@
             <li>Texans</li>
             <li>Titans</li>
         </ol>
+    </section>
 
     <h2><a href="Stats.html">Stats</a></h2>
 
