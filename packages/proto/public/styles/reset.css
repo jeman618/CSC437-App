@@ -13,6 +13,18 @@ img {
   height: auto;
 }
 
+& > * {
+  width: fit-content;
+  @media screen and 
+    (max-width: 50rem) {
+    --page-grids: 2;
+  } 
+  @media screen and
+    (max-width: 30rem) {
+    --page-grids: 1;
+  }
+}
+
 header {
   line-height: 0;
   display: flex;
@@ -25,7 +37,7 @@ header {
 
 .Teams {
   display: grid;
-  grid-template-columns: [start] 1fr 1fr 1fr 1fr [end];
+  grid-template-columns: repeat( var(--page-grids), 1fr);
   gap: 5px;
   align-items: start;
 }
