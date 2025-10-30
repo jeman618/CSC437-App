@@ -163,6 +163,7 @@
         };
 
         const page = document.body;
+        // will replace current colors with the darkmode colors if checked
         page.addEventListener("darkmode:toggle", (event) => {
             if (event.detail.checked) {
                 event.currentTarget.classList.add("dark-mode");
