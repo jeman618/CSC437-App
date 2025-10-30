@@ -13,17 +13,22 @@
     <link rel="stylesheet" href="/styles/page.css">
     <link rel="stylesheet" href="/styles/reset.css">
 
-    <title>Football </title>
+    <title>Football</title>
 </head>
 
 <body class="page">
-
+    
     <header>
         <h1><svg class="icon"> <use href="/icons/football.svg#icon-player"/></svg>
             All Football
         </h1>
-        <p>All your football needs</p>
+        <label id = "dark-label">
+            <p>All your football needs</p>
+            <input type="checkbox" autocomplete="off"/>
+            Dark mode
+        </label>
     </header>
+
     <section class = "Schedule">
         <h2>Games</h2>
         <dl>
@@ -136,6 +141,38 @@
     </section>
 
     <h2><a href="Stats.html">Stats</a></h2>
+
+    <script>
+        // gets label with dark mode checkbox
+        const darkLabel = document.getElementById("dark-label");
+        
+        darkLabel.onchange = (event) => {
+            
+            event.stopPropagation(); // won't show without this
+
+            // creating the custom event for dark mode
+            const darkToggle = new CustomEvent("darkmode:toggle", {
+                bubbles: true, // won't show without this
+                detail: {
+                    checked: event.target.checked
+                }
+            });
+            
+            // last step to "firing an event"
+            darkLabel.dispatchEvent(darkToggle);
+        };
+
+        const page = document.body;
+        page.addEventListener("darkmode:toggle", (event) => {
+            if (event.detail.checked) {
+                event.currentTarget.classList.add("dark-mode");
+            }
+            else {
+                event.currentTarget.classList.remove("dark-mode");
+            }
+        });
+
+    </script>
 
 </body>
 </html>

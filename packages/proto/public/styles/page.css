@@ -1,5 +1,5 @@
 body {
-    background-color: var(--color-background);
+    background-color: var(--color-background-page);
     font-family: 'Roboto', sans-serif;
     color: var(--color-text);
 }
@@ -42,7 +42,7 @@ h3 {
 }
 
 p {
-    color: yellow;
+    color: var(--p-color-text);
     padding: 5px;
     text-decoration: underline;
 }

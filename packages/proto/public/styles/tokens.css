@@ -1,9 +1,17 @@
 :root {
     --color-background-title: #1B47A6;
     --color-background-header: #1B47A6;
-    --color-background: #f7f0d1;
+    --color-background-page: #f7f0d1;
     --color-text-header: white;
     --color-text: black;
     --align-text: center;
     --page-grids: 4;
+    --p-color-text: #ffff00;
+}
+
+body.dark-mode {
+  --p-color-text: #0000ff;
+  --color-background-page: #080f2e;
+  --color-background-header: #e4b859;
+  --color-text: white;
 }
