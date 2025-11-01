@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Libertinus+Serif+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/tokens.css">
+    <link rel="stylesheet" href="/styles/page.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+
+    <title>Football</title>
+</head>
+
+<body class="page">
+    <destination-element name="Adventurer"></destination-element>
+    
+    <header>
+        <h1><svg class="icon"> <use href="/icons/football.svg#icon-player"/></svg>
+            All Football
+        </h1>
+        <label id = "dark-label">
+            <p>All your football needs</p>
+            <input type="checkbox" autocomplete="off"/>
+            Dark mode
+        </label>
+    </header>
+
+    <section class = "Schedule">
+        <h2>Games</h2>
+        <dl>
+            <dt>10/26 10:00pm <a href="Games.html">49ers @ Seahawks</a></dt>
+            <dt>11/06 1:05pm <a href="Games.html">49ers @ Rams</a></dt>
+            <dt>11/13 5:20pm <a href="Games.html">49ers vs Cardinals</a></dt>
+        </dl>
+    </section>
+
+    <h2>Teams</h2>
+    <h3><img src="teams/logos/NFC_logo.png" alt="N" class="C_logo">FC</h3>
+    <div class="Teams">
+        <dl>
+            <h3>NFC East</h3> 
+            <dt><nfl-team name="Eagles" logo="teams/logos/Philadelphia_Eagles.png" href="teams/eagles.html"></nfl-team></dt>
+            <dt><nfl-team name="Commanders" logo="teams/logos/Washington_Commanders.png" href="teams/commanders.html"></nfl-team></dt>
+            <dt><nfl-team name="Cowboys" logo="teams/logos/Dallas_Cowboys.png"></nfl-team></dt>
+            <dt><nfl-team name="Giants" logo="teams/logos/New_York_Giants.png"></nfl-team></dt>        
+        </dl>  
+        <dl>
+            <h3>NFC West</h3>
+            <dt><nfl-team name="49ers" logo="teams/logos/San_Francisco_49ers.png" href="teams/49ers.html"></nfl-team></dt>
+            <dt><nfl-team name="Seahawks" logo="teams/logos/Seattle_Seahawks.png" href="teams/seahawks.html"></nfl-team></dt>
+            <dt><nfl-team name="Rams" logo="teams/logos/Los_Angeles_Rams.png" href="teams/rams.html"></nfl-team></dt>
+            <dt><nfl-team name="Cardinals" logo="teams/logos/Arizona_Cardinals.png" href="teams/cardinals.html"></nfl-team></dt> 
+        </dl>
+        <dl>
+            <h3>NFC North</h3>
+            <dt><nfl-team name="Lions" logo="teams/logos/Detroit_Lions.png"></nfl-team></dt>
+            <dt><nfl-team name="Packers" logo="teams/logos/Green_Bay_Packers.png"></nfl-team></dt>
+            <dt><nfl-team name="Vikings" logo="teams/logos/Minnesota_Vikings.png"></nfl-team></dt>
+            <dt><nfl-team name="Bears" logo="teams/logos/Chicago_Bears.png"></nfl-team></dt>    
+        </dl>
+        <dl>
+            <h3>NFC South</h3>
+            <dt><nfl-team name="Buccaneers" logo="teams/logos/Tampa_Bay_Buccaneers.png"></nfl-team></dt>
+            <dt><nfl-team name="Falcons" logo="teams/logos/Atlanta_Falcons.png"></nfl-team></dt>
+            <dt><nfl-team name="Panthers" logo="teams/logos/Carolina_Panthers.png"></nfl-team></dt>
+            <dt><nfl-team name="Saints" logo="teams/logos/New_Orleans_Saints.png"></nfl-team></dt>  
+        </dl>
+    </div>
+    <h3><img src="teams/logos/AFC_logo.png" alt="A" class="C_logo">FC</h3> 
+    <div class="Teams">
+        <dl>
+            <h3>AFC East</h3>
+            <dt><nfl-team name="Bills" logo="teams/logos/Buffalo_Bills.png"></nfl-team></dt>
+            <dt><nfl-team name="Patriots" logo="teams/logos/New_England_Patriots.png"></nfl-team></dt>
+            <dt><nfl-team name="Dolphins" logo="teams/logos/Miami_Dolphins.png"></nfl-team></dt>
+            <dt><nfl-team name="Jets" logo="teams/logos/New_York_Jets.png"></nfl-team></dt>
+        </dl>
+        <dl>
+            <h3>AFC West</h3>
+            <dt><nfl-team name="Chargers" logo="teams/logos/Los_Angeles_Chargers.png"></nfl-team></dt>
+            <dt><nfl-team name="Chiefs" logo="teams/logos/Kansas_City_Chiefs.png"></nfl-team></dt>
+            <dt><nfl-team name="Broncos" logo="teams/logos/Denver_Broncos.png"></nfl-team></dt>
+            <dt><nfl-team name="Raiders" logo="teams/logos/Las_Vegas_Raiders.png"></nfl-team></dt>
+        </dl>
+        <dl>
+            <h3>AFC North</h3>
+            <dt><nfl-team name="Steelers" logo="teams/logos/Pittsburgh_Steelers.png"></nfl-team></dt>
+            <dt><nfl-team name="Bengals" logo="teams/logos/Cincinnati_Bengals.png"></nfl-team></dt>
+            <dt><nfl-team name="Ravens" logo="teams/logos/Baltimore_Ravens.png"></nfl-team></dt>
+            <dt><nfl-team name="Browns" logo="teams/logos/Cleveland_Browns.png"></nfl-team></dt>
+        </dl>
+        <dl>
+            <h3>AFC South</h3>
+            <dt><nfl-team name="Colts" logo="teams/logos/Indianapolis_Colts.png"></nfl-team></dt>
+            <dt><nfl-team name="Jaguars" logo="teams/logos/Jacksonville_Jaguars.png"></nfl-team></dt>
+            <dt><nfl-team name="Texans" logo="teams/logos/Houston_Texans.png"></nfl-team></dt>
+            <dt><nfl-team name="Titans" logo="teams/logos/Tennessee_Titans.png"></nfl-team></dt>
+        </dl>
+    </div>
+
+    <section class="Ranking">
+        <h2>Ranking</h2>
+        <ol>
+            <li><a href="49ers.html"><img src="teams/logos/San_Francisco_49ers.png" alt="49ers Logo">49ers</a></li>
+            <li>Rams</li>
+            <li>Seahawks</li>
+            <li>Cardinals</li>
+            <li>Eagles</li>
+            <li>Commanders</li>
+            <li>Cowboys</li>
+            <li>Giants</li>
+            <li>Lions</li>
+            <li>Packers</li>
+            <li>Vikings</li>
+            <li>Bears</li>
+            <li>Buccaneers</li>
+            <li>Falcons</li>
+            <li>Panthers</li>
+            <li>Saints</li>
+            <li>Bills</li>
+            <li>Patriots</li>
+            <li>Dolphins</li>
+            <li>Jets</li>
+            <li>Chargers</li>
+            <li>Chiefs</li>
+            <li>Broncos</li>
+            <li>Raiders</li>
+            <li>Steelers</li>
+            <li>Bengals</li>
+            <li>Ravens</li>
+            <li>Browns</li>
+            <li>Colts</li>
+            <li>Jaguars</li>
+            <li>Texans</li>
+            <li>Titans</li>
+        </ol>
+    </section>
+
+    <h2><a href="Stats.html">Stats</a></h2>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "@calpoly/mustang":
+                "https://unpkg.com/@calpoly/mustang"
+            }
+        }
+    </script>
+
+    <script type="module" src="/src/<component>.ts"></script>
+    <script type="module" src="/components/elements.js"></script>
+
+</body>
+</html>

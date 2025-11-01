@@ -16,8 +16,11 @@
     "url": "https://github.com/jeman618/CSC437-App/issues"
   },
   "homepage": "https://github.com/jeman618/CSC437-App#readme",
-
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  }
 }

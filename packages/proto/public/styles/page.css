@@ -47,7 +47,7 @@ p {
     text-decoration: underline;
 }
 
-dl, dt, dd {
+dl, dt, nfl-team, dd {
     text-align: var(--align-text);
 }
 
