@@ -1,6 +1,7 @@
 // src/destination.ts
 import { html, css, LitElement } from "lit";
 import { property } from "lit/decorators.js";
+import reset from "./styles/reset.css.ts";
 
 export class DestinationElement extends LitElement {
     @property({type : String}) name = "Wonderer";
@@ -11,10 +12,12 @@ export class DestinationElement extends LitElement {
     `;
   }
 
-  static styles = css`
-  h2 {
-    color: black;
-  }`;
+  static styles = [
+    reset.styles,
+    css`
+        h2, p {
+            text-align: left;
+        }
+    `
+  ]
 }
-
-customElements.define("destination-element", DestinationElement);

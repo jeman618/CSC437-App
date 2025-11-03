@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="/styles/reset.css">
 
     <title>Football</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "@calpoly/mustang":
+                "https://unpkg.com/@calpoly/mustang"
+            }
+        }
+    </script>
+  <script type="module" crossorigin src="/assets/index-ab74AOo_.js"></script>
 </head>
 
 <body class="page">
@@ -142,27 +151,9 @@
 
     <h2><a href="Stats.html">Stats</a></h2>
 
-    <script type="importmap">
-        {
-            "imports": {
-                "@calpoly/mustang":
-                "https://unpkg.com/@calpoly/mustang"
-            }
-        }
-    </script>
 
-    <script type="module" src="/src/<component>.ts"></script>
+
     <script type="module" src="/components/elements.js"></script>
-    <script type="module" src="/src/nfl-teams.ts"></script>
-    <srcipt type="module" src="/data/teams.json"></srcipt>
 
-    <script type="module">
-      import { define } from "@calpoly/mustang";
-      import { DestinationElement } from "/src/<component>.js";
-
-      define({
-        "destination-element": DestinationElement
-      });
-    </script>
 </body>
 </html>
