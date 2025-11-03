@@ -16,7 +16,7 @@
 </head>
 
 <body class="page">
-    <destination-element name="Adventurer"></destination-element>
+    <test-element name="Adventurer"></test-element>
     
     <header>
         <h1><svg class="icon"> <use href="/icons/football.svg#icon-player"/></svg>
@@ -158,10 +158,10 @@
 
     <script type="module">
       import { define } from "@calpoly/mustang";
-      import { DestinationElement } from "/src/<component>.js";
+      import { TestElement } from "/src/<component>.js";
 
       define({
-        "destination-element": DestinationElement
+        "test-element": TestElement
       });
     </script>
 </body>
