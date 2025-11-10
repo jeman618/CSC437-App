@@ -15,11 +15,11 @@ function index(): Promise<Team[]> {
   return TeamModel.find();
 }
 
-function get(id: String): Promise<Team> {
-  return TeamModel.find({ id })
+function get(name : String): Promise<Team> {
+  return TeamModel.find({ name })
     .then((list) => list[0])
     .catch((err) => {
-      throw `${id} Not Found`;
+      throw `${name} Not Found`;
     });
 }
 

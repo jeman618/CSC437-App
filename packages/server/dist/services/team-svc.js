@@ -30,7 +30,7 @@ const teamSchema = new import_mongoose.Schema(
   },
   { collection: "teams" }
 );
-const TeamModel = (0, import_mongoose.model)("team", teamSchema);
+const TeamModel = (0, import_mongoose.model)("Team", teamSchema);
 function index() {
   return TeamModel.find();
 }
