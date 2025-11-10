@@ -2,22 +2,22 @@
     "teams": [
         {
             "name": "San Francisco 49ers",
-            "logo": "/teams/logos/San_Francisco_49ers.png",
-            "website": "https://www.49ers.com"
+            "logo": "./teams/logos/San_Francisco_49ers.png",
+            "website": "teams/49ers.html"
          },
          {
             "name": "Seattle Seahawks",
-            "logo": "/teams/logos/Seattle_Seahawks.png",
+            "logo": "./teams/logos/Seattle_Seahawks.png",
             "website": "https://www.seahawks.com"
          },
          {
             "name": "Los Angeles Rams",
-            "logo": "/teams/logos/Los_Angeles_Rams.png",
-            "website": "https://www.seahawks.com"
+            "logo": "./teams/logos/Los_Angeles_Rams.png",
+            "website": "https://www.rams.com"
          },
          {
             "name": "Arizona Cardinals",
-            "logo": "/teams/logos/Arizona_Cardinals.png",
+            "logo": "./teams/logos/Arizona_Cardinals.png",
             "website": "https://www.cardinals.com"
          }
     ]

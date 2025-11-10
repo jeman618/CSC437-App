@@ -1,0 +1,24 @@
+{
+"teams": [
+      { 
+         "name": "Bills",
+         "logo": "./teams/logos/Buffalo_Bills.png",
+         "website": ""
+      },
+      {
+         "name": "Patriots",
+         "logo": "./teams/logos/New_England_Patriots.png",
+         "website": ""
+      },
+      {
+         "name": "Dolphins",
+         "logo": "./teams/logos/Miami_Dolphins.png",
+         "website": ""
+      },
+      {
+         "name": "Jets",
+         "logo": "./teams/logos/New_York_Jets.png",
+         "website": ""
+      }
+   ]
+}

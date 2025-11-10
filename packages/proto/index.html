@@ -43,62 +43,38 @@
     <div class="Teams">
         <dl>
             <h3>NFC East</h3> 
-            <dt><nfl-team name="Eagles" logo="teams/logos/Philadelphia_Eagles.png" href="teams/eagles.html"></nfl-team></dt>
-            <dt><nfl-team name="Commanders" logo="teams/logos/Washington_Commanders.png" href="teams/commanders.html"></nfl-team></dt>
-            <dt><nfl-team name="Cowboys" logo="teams/logos/Dallas_Cowboys.png"></nfl-team></dt>
-            <dt><nfl-team name="Giants" logo="teams/logos/New_York_Giants.png"></nfl-team></dt>        
+            <nfl-roster src="data/nfc_east.json"></nfl-roster>  
         </dl>  
         <dl>
             <h3>NFC West</h3>
-            <dt><nfl-team name="49ers" logo="teams/logos/San_Francisco_49ers.png" href="teams/49ers.html"></nfl-team></dt>
-            <dt><nfl-team name="Seahawks" logo="teams/logos/Seattle_Seahawks.png" href="teams/seahawks.html"></nfl-team></dt>
-            <dt><nfl-team name="Rams" logo="teams/logos/Los_Angeles_Rams.png" href="teams/rams.html"></nfl-team></dt>
-            <dt><nfl-team name="Cardinals" logo="teams/logos/Arizona_Cardinals.png" href="teams/cardinals.html"></nfl-team></dt> 
+            <nfl-roster src="data/nfc_west.json"></nfl-roster>
         </dl>
         <dl>
             <h3>NFC North</h3>
-            <dt><nfl-team name="Lions" logo="teams/logos/Detroit_Lions.png"></nfl-team></dt>
-            <dt><nfl-team name="Packers" logo="teams/logos/Green_Bay_Packers.png"></nfl-team></dt>
-            <dt><nfl-team name="Vikings" logo="teams/logos/Minnesota_Vikings.png"></nfl-team></dt>
-            <dt><nfl-team name="Bears" logo="teams/logos/Chicago_Bears.png"></nfl-team></dt>    
+            <nfl-roster src="data/nfc_north.json"></nfl-roster> 
         </dl>
         <dl>
             <h3>NFC South</h3>
-            <dt><nfl-team name="Buccaneers" logo="teams/logos/Tampa_Bay_Buccaneers.png"></nfl-team></dt>
-            <dt><nfl-team name="Falcons" logo="teams/logos/Atlanta_Falcons.png"></nfl-team></dt>
-            <dt><nfl-team name="Panthers" logo="teams/logos/Carolina_Panthers.png"></nfl-team></dt>
-            <dt><nfl-team name="Saints" logo="teams/logos/New_Orleans_Saints.png"></nfl-team></dt>  
+            <nfl-roster src="data/nfc_south.json"></nfl-roster>
         </dl>
     </div>
     <h3><img src="teams/logos/AFC_logo.png" alt="A" class="C_logo">FC</h3> 
     <div class="Teams">
         <dl>
             <h3>AFC East</h3>
-            <dt><nfl-team name="Bills" logo="teams/logos/Buffalo_Bills.png"></nfl-team></dt>
-            <dt><nfl-team name="Patriots" logo="teams/logos/New_England_Patriots.png"></nfl-team></dt>
-            <dt><nfl-team name="Dolphins" logo="teams/logos/Miami_Dolphins.png"></nfl-team></dt>
-            <dt><nfl-team name="Jets" logo="teams/logos/New_York_Jets.png"></nfl-team></dt>
+            <nfl-roster src="data/afc_east.json"></nfl-roster>
         </dl>
         <dl>
             <h3>AFC West</h3>
-            <dt><nfl-team name="Chargers" logo="teams/logos/Los_Angeles_Chargers.png"></nfl-team></dt>
-            <dt><nfl-team name="Chiefs" logo="teams/logos/Kansas_City_Chiefs.png"></nfl-team></dt>
-            <dt><nfl-team name="Broncos" logo="teams/logos/Denver_Broncos.png"></nfl-team></dt>
-            <dt><nfl-team name="Raiders" logo="teams/logos/Las_Vegas_Raiders.png"></nfl-team></dt>
+            <nfl-roster src="data/afc_west.json"></nfl-roster>
         </dl>
         <dl>
             <h3>AFC North</h3>
-            <dt><nfl-team name="Steelers" logo="teams/logos/Pittsburgh_Steelers.png"></nfl-team></dt>
-            <dt><nfl-team name="Bengals" logo="teams/logos/Cincinnati_Bengals.png"></nfl-team></dt>
-            <dt><nfl-team name="Ravens" logo="teams/logos/Baltimore_Ravens.png"></nfl-team></dt>
-            <dt><nfl-team name="Browns" logo="teams/logos/Cleveland_Browns.png"></nfl-team></dt>
+            <nfl-roster src="data/afc_north.json"></nfl-roster>
         </dl>
         <dl>
             <h3>AFC South</h3>
-            <dt><nfl-team name="Colts" logo="teams/logos/Indianapolis_Colts.png"></nfl-team></dt>
-            <dt><nfl-team name="Jaguars" logo="teams/logos/Jacksonville_Jaguars.png"></nfl-team></dt>
-            <dt><nfl-team name="Texans" logo="teams/logos/Houston_Texans.png"></nfl-team></dt>
-            <dt><nfl-team name="Titans" logo="teams/logos/Tennessee_Titans.png"></nfl-team></dt>
+            <nfl-roster src="data/afc_south.json"></nfl-roster>
         </dl>
     </div>
 
@@ -153,8 +129,12 @@
 
     <script type="module" src="/src/<component>.ts"></script>
     <script type="module" src="/components/elements.js"></script>
-    <script type="module" src="/src/nfl-teams.ts"></script>
-    <srcipt type="module" src="/data/teams.json"></srcipt>
+    <script type="module">
+        import "/src/nfl-team.ts";
+        import "/src/nfl-roster.ts";
+    </script>
+
+    <nfl-roster src="/data/nfc_west.json"></nfl-roster>
 
     <script type="module">
       import { define } from "@calpoly/mustang";
