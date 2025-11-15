@@ -16,7 +16,8 @@
 </head>
 
 <body class="page">
-    <test-element name="Adventurer"></test-element>
+    <mu-auth provides="football:auth">
+    <header-element></header-element>
     
     <header>
         <h1><svg class="icon"> <use href="/icons/football.svg#icon-player"/></svg>
@@ -117,6 +118,7 @@
     </section>
 
     <h2><a href="Stats.html">Stats</a></h2>
+    </mu-auth>
 
     <script type="importmap">
         {
@@ -137,10 +139,15 @@
     <nfl-roster src="/data/nfc_west.json"></nfl-roster>
 
     <script type="module">
-      import { define } from "@calpoly/mustang";
+      import { define, Auth } from "@calpoly/mustang";
       import { TestElement } from "/src/<component>.js";
+      import { HeaderElement } from "/src/header.ts";
 
-        console.log("dfsfsdf");
+      define({
+          "header-element": HeaderElement,
+          "mu-auth": Auth.Provider});
+    
+      HeaderElement.initializeOnce();
 
       async function getData() {
         const url = "rapidapi.com"
