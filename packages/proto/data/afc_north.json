@@ -1,0 +1,24 @@
+{
+"teams": [
+      { 
+         "name": "Steelers",
+         "logo": "./teams/logos/Pittsburgh_Steelers.png",
+         "website": ""
+      },
+      {
+         "name": "Bengals",
+         "logo": "./teams/logos/Cincinnati_Bengals.png",
+         "website": "teams/commanders.html"
+      },
+      {
+         "name": "Ravens",
+         "logo": "./teams/logos/Baltimore_Ravens.png",
+         "website": ""
+      },
+      {
+         "name": "Browns",
+         "logo": "./teams/logos/Cleveland_Browns.png",
+         "website": ""
+      }
+   ]
+}

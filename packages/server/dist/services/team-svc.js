@@ -24,9 +24,13 @@ module.exports = __toCommonJS(team_svc_exports);
 var import_mongoose = require("mongoose");
 const teamSchema = new import_mongoose.Schema(
   {
-    name: { type: String, required: true },
-    logo: { type: String, required: true },
-    website: { type: String, required: true }
+    team: [
+      {
+        name: { type: String, required: true },
+        logo: { type: String, required: true },
+        website: { type: String, required: true }
+      }
+    ]
   },
   { collection: "teams" }
 );
@@ -34,9 +38,34 @@ const TeamModel = (0, import_mongoose.model)("Team", teamSchema);
 function index() {
   return TeamModel.find();
 }
-function get(name) {
-  return TeamModel.find({ name }).then((list) => list[0]).catch((err) => {
-    throw `${name} Not Found`;
+function getById(id) {
+  return TeamModel.findById(id).catch((err) => {
+    throw `${id} Not Found`;
   });
 }
-var team_svc_default = { index, get };
+async function getTeamByName(name) {
+  const division = await TeamModel.findOne({ "team.name": name });
+  if (!division) return null;
+  const team = division.team.find((t) => t.name === name);
+  return team || null;
+}
+function create(div) {
+  const newDivision = new TeamModel(div);
+  return newDivision.save();
+}
+function update(name, logo, website) {
+  return TeamModel.findOneAndUpdate({ name }, { name, logo, website }, {
+    new: true
+  }).then((updated) => {
+    if (!updated) throw `${name} not updated`;
+    else return updated;
+  });
+}
+function remove(name) {
+  return TeamModel.findOneAndDelete({ name }).then(
+    (deleted) => {
+      if (!deleted) throw `${name} not deleted`;
+    }
+  );
+}
+var team_svc_default = { index, getById, getTeamByName, create, update, remove };

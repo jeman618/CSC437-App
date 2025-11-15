@@ -1,0 +1,24 @@
+{
+"teams": [
+      { 
+         "name": "Buccaneers",
+         "logo": "./teams/logos/Tampa_Bay_Buccaneers.png",
+         "website": ""
+      },
+      {
+         "name": "Falcons",
+         "logo": "./teams/logos/Atlanta_Falcons.png",
+         "website": ""
+      },
+      {
+         "name": "Panthers",
+         "logo": "./teams/logos/Carolina_Panthers.png",
+         "website": ""
+      },
+      {
+         "name": "Saints",
+         "logo": "./teams/logos/New_Orleans_Saints.png",
+         "website": ""
+      }
+   ]
+}

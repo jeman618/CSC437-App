@@ -1,26 +1,64 @@
-// src/services/user-svc.ts
+// src/services/team-svc.ts
 import { Schema, model } from "mongoose";
-import { Team } from "../models/team";
+import { Division, Team } from "../models/team";
 
-const teamSchema = new Schema<Team>({
-  name: { type: String, required: true },
-  logo: { type: String, required: true },
-  website: { type: String, required: true },
+const teamSchema = new Schema({
+  team : [
+    {
+      name: { type: String, required: true },
+      logo: { type: String, required: true },
+      website: { type: String, required: true }
+    }
+  ]
 },
 { collection: "teams" });
 
-const TeamModel = model<Team>("Team", teamSchema);
+const TeamModel = model<Division>("Team", teamSchema);
 
-function index(): Promise<Team[]> {
+function index(): Promise<Division[]> {
   return TeamModel.find();
 }
 
-function get(name : String): Promise<Team> {
-  return TeamModel.find({ name })
-    .then((list) => list[0])
+function getById(id : String): Promise<Division | null> {
+  return TeamModel.findById(id)
     .catch((err) => {
-      throw `${name} Not Found`;
+      throw `${id} Not Found`;
     });
 }
 
-export default { index, get };
+async function getTeamByName(name: String): Promise<Team | null> {
+  const division = await TeamModel.findOne({ "team.name": name });
+  if (!division) return null;
+
+  // Find the matching team inside the array
+  const team = division.team.find(t => t.name === name);
+  return team || null;
+}
+
+function create(div: Division): Promise<Division> {
+  const newDivision = new TeamModel(div);
+  return newDivision.save();
+}
+
+function update(
+  name: String,
+  logo: String,
+  website: String,
+): Promise<Team> {
+  return TeamModel.findOneAndUpdate({ name }, { name, logo, website }, {
+    new: true
+  }).then((updated) => {
+    if (!updated) throw `${name} not updated`;
+    else return updated as unknown as Team;
+  });
+}
+
+function remove(name: String): Promise<void> {
+  return TeamModel.findOneAndDelete({ name }).then(
+    (deleted) => {
+      if (!deleted) throw `${name} not deleted`;
+    }
+  );
+}
+
+export default { index, getById, getTeamByName, create, update, remove };

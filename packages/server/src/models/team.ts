@@ -4,3 +4,8 @@ export interface Team {
     logo: string;
     website: string;
 }
+
+export interface Division {
+  _id: string;
+  team: Team[];
+}
