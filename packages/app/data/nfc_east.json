@@ -1,0 +1,24 @@
+{
+"teams": [
+      { 
+         "name": "Eagles",
+         "logo": "./teams/logos/Philadelphia_Eagles.png",
+         "website": "teams/eagles.html"
+      },
+      {
+         "name": "Commanders",
+         "logo": "./teams/logos/Washington_Commanders.png",
+         "website": "teams/commanders.html"
+      },
+      {
+         "name": "Cowboys",
+         "logo": "./teams/logos/Dallas_Cowboys.png",
+         "website": ""
+      },
+      {
+         "name": "Giants",
+         "logo": "./teams/logos/New_York_Giants.png",
+         "website": ""
+      }
+   ]
+}

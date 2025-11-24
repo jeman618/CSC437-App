@@ -1,0 +1,24 @@
+{
+"teams": [
+      { 
+         "name": "49ers",
+         "logo": "./teams/logos/San_Francisco_49ers.png",
+         "website": "teams/49ers.html"
+      },
+      {
+         "name": "Seahawks",
+         "logo": "./teams/logos/Seattle_Seahawks.png",
+         "website": "teams/seahawks.html"
+      },
+      {
+         "name": "Rams",
+         "logo": "./teams/logos/Los_Angeles_Rams.png",
+         "website": "teams/rams.html"
+      },
+      {
+         "name": "Cardinals",
+         "logo": "./teams/logos/Arizona_Cardinals.png",
+         "website": "teams/cardinals.html"
+      }
+   ]
+}

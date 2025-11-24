@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Libertinus+Serif+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/tokens.css">
+    <link rel="stylesheet" href="/styles/page.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+
+    <title>Football</title>
+</head>
+
+<body class="page">
+
+    <mu-history provides="football:history" >
+        <mu-auth provides="football:auth" redirect="/login.html"></mu-auth>
+        <script type="importmap">
+        {
+            "imports": {
+                "@calpoly/mustang":
+                "https://unpkg.com/@calpoly/mustang"
+            }
+        }
+        </script>
+        <script type="module">
+            import "./src/views/team-view.ts";  
+        </script>
+        <script type="module" src="/src/main.ts"></script>
+        <mu-switch></mu-switch>
+    </mu-history>
+    
+</body>
+</html>

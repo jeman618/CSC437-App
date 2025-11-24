@@ -1,0 +1,24 @@
+{
+"teams": [
+      { 
+         "name": "Colts",
+         "logo": "./teams/logos/Indianapolis_Colts.png",
+         "website": ""
+      },
+      {
+         "name": "Jaguars",
+         "logo": "./teams/logos/Jacksonville_Jaguars.png",
+         "website": ""
+      },
+      {
+         "name": "Texans",
+         "logo": "./teams/logos/Houston_Texans.png",
+         "website": ""
+      },
+      {
+         "name": "Titans",
+         "logo": "./teams/logos/Tennessee_Titans.png",
+         "website": ""
+      }
+   ]
+}

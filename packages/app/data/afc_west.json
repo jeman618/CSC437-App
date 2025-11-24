@@ -1,0 +1,24 @@
+{
+"teams": [
+      { 
+         "name": "Chargers",
+         "logo": "./teams/logos/Los_Angeles_Chargers.png",
+         "website": ""
+      },
+      {
+         "name": "Chiefs",
+         "logo": "./teams/logos/Kansas_City_Chiefs.png",
+         "website": ""
+      },
+      {
+         "name": "Bronocs",
+         "logo": "./teams/logos/Denver_Broncos.png",
+         "website": ""
+      },
+      {
+         "name": "Raiders",
+         "logo": "./teams/logos/Las_Vegas_Raiders.png",
+         "website": ""
+      }
+   ]
+}
