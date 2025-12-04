@@ -12,7 +12,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@calpoly/mustang": "^0.1.13",
-    "lit": "^3.3.1"
+    "@calpoly/mustang": "^1.0.18",
+    "lit": "^3.3.1",
+    "server": "file:../server"
   }
 }

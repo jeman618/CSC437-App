@@ -37,7 +37,7 @@ const router = import_express.default.Router();
 router.get("/", (_, res) => {
   import_team_svc.default.index().then((list) => res.json(list)).catch((err) => res.status(500).send(err));
 });
-router.get("/api/teams/team/:name", async (req, res) => {
+router.get("/team/:name", async (req, res) => {
   const { name } = req.params;
   try {
     const team = await import_team_svc.default.getTeamByName(name);
@@ -45,16 +45,6 @@ router.get("/api/teams/team/:name", async (req, res) => {
     res.json(team);
   } catch (err) {
     res.status(500).send(err);
-  }
-});
-router.get("/api/teams/:id", async (req, res) => {
-  const { id } = req.params;
-  try {
-    const division = await import_team_svc.default.getById(id);
-    if (!division) return res.status(404).send("Division not found");
-    res.json(division);
-  } catch {
-    res.status(500).send("Error finding division");
   }
 });
 router.post("/", (req, res) => {
@@ -72,7 +62,7 @@ router.put("/:name", (req, res) => {
     newTeam.website
   ).then((updatedTeam) => res.json(updatedTeam)).catch((err) => res.status(500).send(err));
 });
-router.delete("/:userid", (req, res) => {
+router.delete("/:name", (req, res) => {
   const { name } = req.params;
   import_team_svc.default.remove(name).then(() => res.status(204).end()).catch((err) => res.status(404).send(err));
 });

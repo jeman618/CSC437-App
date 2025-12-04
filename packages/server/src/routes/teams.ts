@@ -11,7 +11,7 @@ router.get("/", (_, res: Response) => {
     .catch((err) => res.status(500).send(err));
 });
 
-router.get("/api/teams/team/:name", async (req: Request, res: Response) => {
+router.get("/team/:name", async (req: Request, res: Response) => {
   const { name } = req.params;
 
   try {
@@ -25,11 +25,11 @@ router.get("/api/teams/team/:name", async (req: Request, res: Response) => {
   }
 });
 
-router.get("/api/teams/:id", async (req: Request, res: Response) => {
-  const { id } = req.params;
+/*router.get("/", async (req: Request, res: Response) => {
+  const { name } = req.params;
 
   try {
-    const division = await Teams.getById(id);
+    const division = await Teams.getById(name);
 
     if (!division) return res.status(404).send("Division not found");
 
@@ -37,14 +37,14 @@ router.get("/api/teams/:id", async (req: Request, res: Response) => {
   } catch {
     res.status(500).send("Error finding division");
   }
-});
+});*/
 
 router.post("/", (req: Request, res: Response) => {
   const newDivision = req.body;
 
-Teams.create(newDivision)
-  .then((division: Division) =>
-    res.status(201).json(division)
+  Teams.create(newDivision)
+    .then((division: Division) =>
+      res.status(201).json(division)
   )
   .catch((err) => res.status(500).send(err));
 });
@@ -62,7 +62,7 @@ router.put("/:name", (req: Request, res: Response) => {
     .catch((err) => res.status(500).send(err));
 });
 
-router.delete("/:userid", (req: Request, res: Response) => {
+router.delete("/:name", (req: Request, res: Response) => {
   const { name } = req.params;
 
   Teams.remove(name)

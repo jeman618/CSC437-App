@@ -1,10 +1,14 @@
-import { define, Auth, Switch, History } from "@calpoly/mustang";
+import { define, Auth, Switch, Store, History } from "@calpoly/mustang";
 import { HeaderElement } from "./components/header.js";
 import { html } from "lit";
-import "./views/team-view"
-import "./views/home-view"
+import { Msg } from "./messages";
+import { Model, init } from "./model";
+import update from "./update";
+import "./views/team-view";
+import { HomeViewElement } from "./views/home-view";
 
 const routes = [
+
   {
     path: "/app",
     view: () => html`
@@ -31,7 +35,15 @@ const routes = [
             constructor() {
                 super(routes, "football:history", "football:auth");
             }
-        }
+        },
+        "mu-store": class AppStore
+        extends Store.Provider<Model, Msg>
+        {
+          constructor() {
+            super(update, init, "football:auth");
+          }
+        },
+        "home-view" : HomeViewElement
     });
     
     HeaderElement.initializeOnce();
@@ -42,7 +54,9 @@ const routes = [
     .then((response) => {
         return response.json();
     })
-    .then(data => {})
+    .then(data => {
+
+    })
     }
 
     console.log(getData());

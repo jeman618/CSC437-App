@@ -6,6 +6,6 @@ export interface Team {
 }
 
 export interface Division {
-  _id: string;
+  id: string;
   team: Team[];
 }

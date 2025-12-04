@@ -9,7 +9,7 @@
     "moduleResolution": "bundler",
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "../app/src/model.ts"],
   "exclude": ["node_modules"],
   "lib": ["esnext"]
 }

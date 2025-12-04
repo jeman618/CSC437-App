@@ -1,14 +1,14 @@
+import {define, View } from "@calpoly/mustang";
 import { LitElement, html, css } from "lit";
 import { property, state } from "lit/decorators.js";
+import { Msg } from "../messages";
+import { Model } from "../model";
+import { Team } from "server/models";
 
-interface Team {
-  name: string;
-  logo: string;
-  website: string;
-}
 
-export class DivisionViewElement extends LitElement {
-  @property({ attribute: "tean-name" }) teamName?: string;
+
+export class DivisionViewElement extends View<Model, Msg> {
+  @property({ attribute: "team-name" }) teamName?: string;
   @state() teams: Team[] = [];
 
   get src() {
@@ -23,29 +23,15 @@ export class DivisionViewElement extends LitElement {
     `
   ];
 
-  connectedCallback() {
-    super.connectedCallback();
-    if (this.teamName) this.hydrate(this.teamName);
-  }
+  attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+    super.attributeChangedCallback(name, oldValue, newValue);
 
-  load() {
-    fetch(this.src)
-    .then(res => res.json())
-    .then((json: object) => {
-      const data = json as { teams: Team[] };
-      this.teams = data.teams;
-    });
-  }
-
-  hydrate(src: string) {
-    fetch(src)
-    .then(res => res.json())
-    .then((json: object) => {
-      if(json) {
-        const data = json as { teams: Team[] };
-        this.teams = data.teams;
-      }
-    })
+    if (name === "user-id" && newValue !== oldValue) {
+      this.dispatchMessage([
+        "team/request",
+        { teamid: newValue }
+      ]);
+    }
   }
 
   render() {
@@ -65,21 +51,9 @@ export class DivisionViewElement extends LitElement {
     <link rel="stylesheet" href="/styles/tokens.css">
     <link rel="stylesheet" href="/styles/page.css">
     <link rel="stylesheet" href="/styles/reset.css">
-    <h2>Division: ${this.teamName}</h2>
-
-      <dl>
-        ${this.teams.map(
-          (team) => html`
-            <dt>
-              <nfl-team
-                name=${team.name}
-                logo=${team.logo}
-                website=${team.website}
-              ></nfl-team>
-            </dt>
-          `
-        )}
-      </dl>
+    <dl>
+        ${teams.map((team) => html`<dt>${renderTeam(team)}</dt>`)}
+    </dl>
     `;
   }
 }

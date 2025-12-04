@@ -12,26 +12,34 @@
     <link rel="stylesheet" href="/styles/page.css">
     <link rel="stylesheet" href="/styles/reset.css">
 
-    <title>Football</title>
-</head>
-
-<body class="page">
-
-    <mu-history provides="football:history" >
-        <mu-auth provides="football:auth" redirect="/login.html"></mu-auth>
-        <script type="importmap">
+     <script type="importmap">
         {
             "imports": {
                 "@calpoly/mustang":
                 "https://unpkg.com/@calpoly/mustang"
             }
         }
-        </script>
+        </script> 
         <script type="module">
             import "./src/views/team-view.ts";  
+            import "./src/views/home-view.ts";
+            import "/src/nfl-team.ts";
+            import "/src/nfl-roster.ts";
         </script>
-        <script type="module" src="/src/main.ts"></script>
-        <mu-switch></mu-switch>
+
+    <title>Football</title>
+</head>
+
+<body class="page">
+    
+    <mu-history provides="football:history" root="/app" >
+        <mu-auth provides="football:auth" redirect="/login.html">
+            <mu-store provides="football:model">
+                <script type="module" src="/src/main.ts"></script>
+                <home-view></home-view>
+            <mu-switch></mu-switch>
+            </mu-store>
+        </mu-auth>
     </mu-history>
     
 </body>

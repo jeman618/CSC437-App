@@ -11,7 +11,18 @@ export class HomeViewElement extends LitElement {
 
   render() {
     return html`
-    
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Libertinus+Serif+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/tokens.css">
+        <link rel="stylesheet" href="/styles/page.css">
+        <link rel="stylesheet" href="/styles/reset.css">
+
+    </head>
     <header>
         <h1><svg class="icon"> <use href="/icons/football.svg#icon-player"/></svg>
             All Football
@@ -111,6 +122,30 @@ export class HomeViewElement extends LitElement {
     </section>
 
     <h2><a href="Stats.html">Stats</a></h2>
+
+    <script type="module" src="/components/elements.js"></script>
+    <script type="module">
+      import { define, Auth } from "@calpoly/mustang";
+      import { HeaderElement } from "/src/scripts/header.js";
+
+      define({
+          "header-element": HeaderElement,
+          "mu-auth": Auth.Provider});
+    
+      HeaderElement.initializeOnce();
+
+      async function getData() {
+        const url = "rapidapi.com"
+        fetch(url)
+        .then((response) => {
+            return response.json();
+        })
+        .then(data => {})
+        
+      }
+      console.log(getData());
+    </script>
+
     `;
   }
 

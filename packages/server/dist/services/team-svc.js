@@ -34,7 +34,7 @@ const teamSchema = new import_mongoose.Schema(
   },
   { collection: "teams" }
 );
-const TeamModel = (0, import_mongoose.model)("Team", teamSchema);
+const TeamModel = (0, import_mongoose.model)("teams", teamSchema);
 function index() {
   return TeamModel.find();
 }
@@ -54,15 +54,27 @@ function create(div) {
   return newDivision.save();
 }
 function update(name, logo, website) {
-  return TeamModel.findOneAndUpdate({ name }, { name, logo, website }, {
-    new: true
-  }).then((updated) => {
+  return TeamModel.findOneAndUpdate(
+    { "team.name": name },
+    {
+      $set: {
+        "team.$.logo": logo,
+        "team.$.website": website
+      }
+    },
+    {
+      new: true
+    }
+  ).then((updated) => {
     if (!updated) throw `${name} not updated`;
     else return updated;
   });
 }
 function remove(name) {
-  return TeamModel.findOneAndDelete({ name }).then(
+  return TeamModel.findOneAndDelete(
+    {},
+    { $pull: { team: { name } } }
+  ).then(
     (deleted) => {
       if (!deleted) throw `${name} not deleted`;
     }

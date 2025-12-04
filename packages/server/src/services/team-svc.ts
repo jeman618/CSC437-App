@@ -13,7 +13,7 @@ const teamSchema = new Schema({
 },
 { collection: "teams" });
 
-const TeamModel = model<Division>("Team", teamSchema);
+const TeamModel = model<Division>("teams", teamSchema);
 
 function index(): Promise<Division[]> {
   return TeamModel.find();
@@ -45,16 +45,26 @@ function update(
   logo: String,
   website: String,
 ): Promise<Team> {
-  return TeamModel.findOneAndUpdate({ name }, { name, logo, website }, {
-    new: true
-  }).then((updated) => {
+  return TeamModel.findOneAndUpdate(
+    { "team.name": name }, 
+    { 
+      $set: {
+      "team.$.logo": logo, 
+      "team.$.website": website
+    }
+  },
+    {
+      new: true
+    }).then((updated) => {
     if (!updated) throw `${name} not updated`;
     else return updated as unknown as Team;
   });
 }
 
 function remove(name: String): Promise<void> {
-  return TeamModel.findOneAndDelete({ name }).then(
+  return TeamModel.findOneAndDelete({},
+    { $pull: {team: { name }}})
+    .then(
     (deleted) => {
       if (!deleted) throw `${name} not deleted`;
     }
