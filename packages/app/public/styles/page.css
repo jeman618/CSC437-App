@@ -41,6 +41,12 @@ h3 {
     margin: 0.5px;
 }
 
+li {
+    padding: 5px;
+    font-size: 30px;
+    text-align: var(--align-text);
+}
+
 p {
     color: var(--p-color-text);
     padding: 5px;
