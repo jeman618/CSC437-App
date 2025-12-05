@@ -42,9 +42,9 @@ export class HomeViewElement extends LitElement {
     <section class = "Schedule">
         <h2>Games</h2>
         <dl>
-            <dt>10/26 10:00am <a href="games/49ers-seahawks.html">49ers vs Seahawks</a></dt>
-            <dt>11/06 1:05pm <a href="games/49ers-rams.html">49ers vs Rams</a></dt>
-            <dt>11/17 5:20pm <a href="games/49ers-cardinals.html">49ers vs Cardinals</a></dt>
+            <h3>10/26 10:00am <a href="games/49ers-seahawks.html">49ers vs Seahawks</a></h3>
+            <h3>11/06 1:05pm <a href="games/49ers-rams.html">49ers vs Rams</a></h3>
+            <h3>11/17 5:20pm <a href="games/49ers-cardinals.html">49ers vs Cardinals</a></h3>
         </dl>
     </section>
 
@@ -91,38 +91,38 @@ export class HomeViewElement extends LitElement {
     <section class="Ranking">
         <h2>Ranking</h2>
         <ol>
-            <li><a href="49ers.html"><img src="teams/logos/San_Francisco_49ers.png" alt="49ers Logo"></a></li>
-            <li><a href="rams.html"><img src="teams/logos/Los_Angeles_Rams.png" alt="Rams Logo"></a></li>
-            <li><a href="seahawks.html"><img src="teams/logos/Seattle_Seahawks.png" alt="Seahawks Logo"></a></li>
-            <li><a href="cardinals.html"><img src="teams/logos/Arizona_Cardinals.png" alt="Cardinals Logo"></a></li>
-            <li><a href="eagles.html"><img src="teams/logos/Philadelphia_Eagles.png" alt="Eagles Logo"></a></li>
-            <li><a href="commanders.html"><img src="teams/logos/Washington_Commanders.png" alt="Commanders Logo"></a></li>
-            <li><a href="cowboys.html"><img src="teams/logos/Dallas_Cowboys.png" alt="Cowboys Logo"></a></li>
-            <li><a href="giants.html"><img src="teams/logos/New_York_Giants.png" alt="Giants Logo"></a></li>
-            <li><a href="lions.html"><img src="teams/logos/Detroit_Lions.png" alt="Lions Logo"></a></li>
-            <li><a href="packers.html"><img src="teams/logos/Green_Bay_Packers.png" alt="Packers Logo"></a></li>
-            <li><a href="vikings.html"><img src="teams/logos/Minnesota_Vikings.png" alt="Vikings Logo"></a></li>
-            <li><a href="bears.html"><img src="teams/logos/Chicago_Bears.png" alt="Bears Logo"></a></li>
-            <li><a href="buccaneers.html"><img src="teams/logos/Tampa_Bay_Buccaneers.png" alt="Buccaneers Logo"></a></li>
-            <li><a href="falcons.html"><img src="teams/logos/Atlanta_Falcons.png" alt="Falcons Logo"></a></li>
-            <li><a href="panthers.html"><img src="teams/logos/Carolina_Panthers.png" alt="Panthers Logo"></a></li>
-            <li><a href="saints.html"><img src="teams/logos/New_Orleans_Saints.png" alt="Saints Logo"></a></li>
-            <li><a href="bills.html"><img src="teams/logos/Buffalo_Bills.png" alt="Bills Logo"></a></li>
-            <li><a href="patriots.html"><img src="teams/logos/New_England_Patriots.png" alt="Patriots Logo"></a></li>
-            <li><a href="dolphins.html"><img src="teams/logos/Miami_Dolphins.png" alt="Dolphins Logo"></a></li>
-            <li><a href="jets.html"><img src="teams/logos/New_York_Jets.png" alt="Jets Logo"></a></li>
-            <li><a href="chargers.html"><img src="teams/logos/Los_Angeles_Chargers.png" alt="Chargers Logo"></a></li>
-            <li><a href="chiefs.html"><img src="teams/logos/Kansas_City_Chiefs.png" alt="Chiefs Logo"></a></li>
-            <li><a href="broncos.html"><img src="teams/logos/Denver_Broncos.png" alt="Broncos Logo"></a></li>
-            <li><a href="raiders.html"><img src="teams/logos/Las_Vegas_Raiders.png" alt="Raiders Logo"></a></li>
-            <li><a href="steelers.html"><img src="teams/logos/Pittsburgh_Steelers.png" alt="Steelers Logo"></a></li>
-            <li><a href="bengals.html"><img src="teams/logos/Cincinnati_Bengals.png" alt="Bengals Logo"></a></li>
-            <li><a href="ravens.html"><img src="teams/logos/Baltimore_Ravens.png" alt="Ravens Logo"></a></li>
-            <li><a href="browns.html"><img src="teams/logos/Cleveland_Browns.png" alt="Browns Logo"></a></li>
-            <li><a href="colts.html"><img src="teams/logos/Indianapolis_Colts.png" alt="Colts Logo"></a></li>
-            <li><a href="jaguars.html"><img src="teams/logos/Jacksonville_Jaguars.png" alt="Jaguars Logo"></a></li>
-            <li><a href="texans.html"><img src="teams/logos/Houston_Texans.png" alt="Texans Logo"></a></li>
-            <li><a href="titans.html"><img src="teams/logos/Tennessee_Titans.png" alt="Titans Logo"></a></li>
+            <li><a href="teams/49ers.html"><img src="teams/logos/San_Francisco_49ers.png" alt="49ers Logo"></a></li>
+            <li><a href="teams/rams.html"><img src="teams/logos/Los_Angeles_Rams.png" alt="Rams Logo"></a></li>
+            <li><a href="teams/seahawks.html"><img src="teams/logos/Seattle_Seahawks.png" alt="Seahawks Logo"></a></li>
+            <li><a href="teams/cardinals.html"><img src="teams/logos/Arizona_Cardinals.png" alt="Cardinals Logo"></a></li>
+            <li><a href="teams/eagles.html"><img src="teams/logos/Philadelphia_Eagles.png" alt="Eagles Logo"></a></li>
+            <li><a href="teams/commanders.html"><img src="teams/logos/Washington_Commanders.png" alt="Commanders Logo"></a></li>
+            <li><a href="teams/cowboys.html"><img src="teams/logos/Dallas_Cowboys.png" alt="Cowboys Logo"></a></li>
+            <li><a href="teams/giants.html"><img src="teams/logos/New_York_Giants.png" alt="Giants Logo"></a></li>
+            <li><a href="teams/lions.html"><img src="teams/logos/Detroit_Lions.png" alt="Lions Logo"></a></li>
+            <li><a href="teams/packers.html"><img src="teams/logos/Green_Bay_Packers.png" alt="Packers Logo"></a></li>
+            <li><a href="teams/vikings.html"><img src="teams/logos/Minnesota_Vikings.png" alt="Vikings Logo"></a></li>
+            <li><a href="teams/bears.html"><img src="teams/logos/Chicago_Bears.png" alt="Bears Logo"></a></li>
+            <li><a href="teams/buccaneers.html"><img src="teams/logos/Tampa_Bay_Buccaneers.png" alt="Buccaneers Logo"></a></li>
+            <li><a href="teams/falcons.html"><img src="teams/logos/Atlanta_Falcons.png" alt="Falcons Logo"></a></li>
+            <li><a href="teams/panthers.html"><img src="teams/logos/Carolina_Panthers.png" alt="Panthers Logo"></a></li>
+            <li><a href="teams/saints.html"><img src="teams/logos/New_Orleans_Saints.png" alt="Saints Logo"></a></li>
+            <li><a href="teams/bills.html"><img src="teams/logos/Buffalo_Bills.png" alt="Bills Logo"></a></li>
+            <li><a href="teams/patriots.html"><img src="teams/logos/New_England_Patriots.png" alt="Patriots Logo"></a></li>
+            <li><a href="teams/dolphins.html"><img src="teams/logos/Miami_Dolphins.png" alt="Dolphins Logo"></a></li>
+            <li><a href="teams/jets.html"><img src="teams/logos/New_York_Jets.png" alt="Jets Logo"></a></li>
+            <li><a href="teams/chargers.html"><img src="teams/logos/Los_Angeles_Chargers.png" alt="Chargers Logo"></a></li>
+            <li><a href="teams/chiefs.html"><img src="teams/logos/Kansas_City_Chiefs.png" alt="Chiefs Logo"></a></li>
+            <li><a href="teams/broncos.html"><img src="teams/logos/Denver_Broncos.png" alt="Broncos Logo"></a></li>
+            <li><a href="teams/raiders.html"><img src="teams/logos/Las_Vegas_Raiders.png" alt="Raiders Logo"></a></li>
+            <li><a href="teams/steelers.html"><img src="teams/logos/Pittsburgh_Steelers.png" alt="Steelers Logo"></a></li>
+            <li><a href="teams/bengals.html"><img src="teams/logos/Cincinnati_Bengals.png" alt="Bengals Logo"></a></li>
+            <li><a href="teams/ravens.html"><img src="teams/logos/Baltimore_Ravens.png" alt="Ravens Logo"></a></li>
+            <li><a href="teams/browns.html"><img src="teams/logos/Cleveland_Browns.png" alt="Browns Logo"></a></li>
+            <li><a href="teams/colts.html"><img src="teams/logos/Indianapolis_Colts.png" alt="Colts Logo"></a></li>
+            <li><a href="teams/jaguars.html"><img src="teams/logos/Jacksonville_Jaguars.png" alt="Jaguars Logo"></a></li>
+            <li><a href="teams/texans.html"><img src="teams/logos/Houston_Texans.png" alt="Texans Logo"></a></li>
+            <li><a href="teams/titans.html"><img src="teams/logos/Tennessee_Titans.png" alt="Titans Logo"></a></li>
         </ol>
     </section>
 
